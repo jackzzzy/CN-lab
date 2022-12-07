@@ -1,0 +1,4 @@
+#define LOCALPORT 11110
+#define ROOTPORT 11111
+#define TLDPORT 11112
+#define AUTHPORT 11113
