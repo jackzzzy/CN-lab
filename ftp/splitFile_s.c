@@ -35,24 +35,20 @@ int main(int argc, char *argv[]) {
   sockfd1 = socket(AF_INET, SOCK_STREAM, 0);
 
   if (sockfd1 < 0) {
-    perror("Error! ");
     return 1;
   }
 
   if (bind(sockfd1, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
-    perror("Error! ");
     return 1;
   }
 
   if (listen(sockfd1, 5) < 0) {
-    perror("Error! ");
     return 1;
   }
 
   connfd1 = accept(sockfd1, (struct sockaddr *)NULL, NULL);
 
   if (connfd1 < 0) {
-    perror("Error! ");
     return 1;
   }
 
@@ -63,9 +59,6 @@ int main(int argc, char *argv[]) {
 
   int fd = open("text.txt", O_WRONLY);
 
-  if (fd < 0) {
-    printf("Error!\n");
-  }
   puts("Data");
   write(fd, buff, strlen(buff));
   write(fd, buff2, strlen(buff2));
