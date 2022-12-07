@@ -1,6 +1,0 @@
-Theory of Computation: 70
-Linear Algebra: 65
-EVS: 100
-OS: 80
-DBMS: 70
-CA: 56

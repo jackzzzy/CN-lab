@@ -1,1 +1,0 @@
-A copy of this file is created on the directory where the program is executed
