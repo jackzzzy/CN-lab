@@ -38,18 +38,8 @@ int main(int argc, char *argv[]) {
   // connecting to the first server (login)
   sockfd1 = socket(AF_INET, SOCK_STREAM, 0);
 
-  if (sockfd1 < 0) {
-    perror("Error! ");
-    return 1;
-  }
-
   // accepting a client
   connfd1 = connect(sockfd1, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
-
-  if (connfd1 < 0) {
-    perror("Error! ");
-    return 1;
-  }
 
   printf("Connection Established...\n");
 
